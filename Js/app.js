@@ -44,6 +44,8 @@ class Producto {
 
 
 
+
+
 // console.log(Productos);
 
 function ingresarProducto(){
@@ -56,16 +58,23 @@ function ingresarProducto(){
     console.log(nuevoProducto);
     Productos.push(nuevoProducto);
 
+    localStorage.setItem('Agregar', JSON.stringify(nuevoProducto));
+    const miProducto = JSON.parse(localStorage.getItem('Agregar'));
+    // console.log(miProducto);
 
 }
+
+
+
+
 
 localStorage.setItem('Productos', JSON.stringify(Productos));
 const recuperarProductos = JSON.parse(localStorage.getItem('Productos'));
 console.log(recuperarProductos);
 
-localStorage.setItem('Agregar', JSON.stringify(nuevoProducto));
-const miProducto = JSON.parse(localStorage.getItem('Agregar'));
-console.log(miProducto);
+
+
+localStorage.removeItem('Agregar')
 
 
 
