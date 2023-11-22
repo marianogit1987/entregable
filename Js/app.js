@@ -1,11 +1,16 @@
-const carrito = document.getElementsByClassName("Agregar al carrito")
+const containerProdutos = document.getElementById("containerProdutos")
 let agregadoProductos = [];
 
+cargarEventos();
 
-function cargaralCarrito  () {
-    carrito.addEventListener('click', "Agregar al carrito")
-    console.log(cargaralCarrito)
+function cargarEventos(){
+    containerProdutos.addEventListener('click', agregarProducto);
 }
+
+function  agregarProducto(){
+    console.log('se hizo click');
+}
+
 
 
 
