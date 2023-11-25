@@ -2,7 +2,7 @@ const containerProdutos = document.getElementById("container-Productos")
 let agregadoProductos = [];
 
 cargarEventos();
-
+//Trato de hacer un click en los diferentes container-Productos y solamente me hace click en el primer contenedor
 function cargarEventos(){
     containerProdutos.addEventListener('click', agregarProducto);
 }
